@@ -1,0 +1,28 @@
+{
+  "ziploc": [
+    { "id": "z1", "text": "Esto es un abrazo digital, relax.", "tag": "coqueto" },
+    { "id": "z2", "text": "Te debo un café, un sticker y dos risas.", "tag": "meme" },
+    { "id": "z3", "text": "Tu risa: mi playlist favorita.", "tag": "coqueto" },
+    { "id": "z4", "text": "Modo avión: solo tú y yo.", "tag": "deep" },
+    { "id": "z5", "text": "Benita aprueba este mensaje de ternura.", "tag": "benita" },
+    { "id": "z6", "text": "Plan: mimir contigo en llamada, sin prisa.", "tag": "mimir" },
+    { "id": "z7", "text": "Sonrisita express entregada con garantía.", "tag": "meme" },
+    { "id": "z8", "text": "Eres mi coincidencia favorita.", "tag": "deep" },
+    { "id": "z9", "text": "Sticker de gatito: enviado con cariño.", "tag": "benita" },
+    { "id": "z10", "text": "Te guardé en mi bolsillo de cosas bonitas.", "tag": "coqueto" }
+  ],
+  "songs": [
+    { "id": "s1", "title": "Fade Into You", "artist": "Mazzy Star", "url": "https://www.youtube.com/watch?v=ImKY6TZEyrI", "mood": "calmadas", "note": "Suspiras sin darte cuenta." },
+    { "id": "s2", "title": "Sea of Love", "artist": "Cat Power", "url": "https://www.youtube.com/watch?v=jd9YqN1Hy8w", "mood": "calmadas", "note": "Suave abrazo en forma de canción." },
+    { "id": "s3", "title": "Yellow", "artist": "Coldplay", "url": "https://www.youtube.com/watch?v=yKNxeF4KMsY", "mood": "cursis", "note": "Brillas sin esfuerzo." },
+    { "id": "s4", "title": "Kiss Me", "artist": "Sixpence None The Richer", "url": "https://www.youtube.com/watch?v=8N-qo2KcKfQ", "mood": "cursis", "note": "Inocente y perfecto." },
+    { "id": "s5", "title": "Space Song", "artist": "Beach House", "url": "https://www.youtube.com/watch?v=rb2zJQY2uJU", "mood": "mágicas", "note": "Flotas en un sueño." },
+    { "id": "s6", "title": "Oblivion", "artist": "Grimes", "url": "https://www.youtube.com/watch?v=JtH68PJIQLE", "mood": "mágicas", "note": "Extrañamente celestial." },
+    { "id": "s7", "title": "Motion Picture Soundtrack", "artist": "Radiohead", "url": "https://www.youtube.com/watch?v=6q9Ww-wnZIE", "mood": "para_mimir", "note": "Cierra los ojos y descansa." },
+    { "id": "s8", "title": "Night Drive", "artist": "The xx", "url": "https://www.youtube.com/watch?v=k5D6ltgDX60", "mood": "para_mimir", "note": "Luces lejanas y calma." },
+    { "id": "s9", "title": "Put Your Records On", "artist": "Corinne Bailey Rae", "url": "https://www.youtube.com/watch?v=0c1pQcBvF-A", "mood": "para_sonreir", "note": "La vida se siente ligera." },
+    { "id": "s10", "title": "Riptide", "artist": "Vance Joy", "url": "https://www.youtube.com/watch?v=uJ_1HMAGb4k", "mood": "para_sonreir", "note": "Tarareas sin pensarlo." },
+    { "id": "s11", "title": "Nights", "artist": "Frank Ocean", "url": "https://www.youtube.com/watch?v=2fG2K3Vv5_o", "mood": "deep_vibes", "note": "Paisajes internos en alta definición." },
+    { "id": "s12", "title": "Teardrop", "artist": "Massive Attack", "url": "https://www.youtube.com/watch?v=0aO-3YyKc7Q", "mood": "deep_vibes", "note": "Pulso lento y envolvente." }
+  ]
+}
