@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Forever Valentine</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-dark">
+<nav class="site-nav">
+<a href="#hero" class="brand">Forever Valentine</a>
+<div class="nav-actions">
+<button id="modeToggle" class="chip" aria-pressed="false">Modo más noche</button>
+<button id="motionToggle" class="chip" aria-pressed="false">Animaciones ✨</button>
+</div>
+</nav>
+<main id="main">
+<section id="hero" class="section hero" aria-labelledby="hero-title">
+<div class="container">
+<h1 id="hero-title">Be my forever valentine?</h1>
+<div class="hero-text">
+<p>No se tu, pero me has resultado ser una muy bonita coincidencia. No voy a exagerar y decir que eres la mejor de mi vida, porque siento que la respuesta a eso.... nunca quiero encontrarla.</p>
+<p>Nunca quisiera dejar de sorprenderme de ti. No quiero dejar de intercambiar stickers de gatitos, ni desvelos, ni canciones. No quisiera dejar de escuchar tu risa, ni tus audios.</p>
+<p>En cambio lo que quiero es.... escucharte con mi alma y verte con mis manos, abrazar esa parte de nosotros que nadie conoce, y dejar que crezca. Quiero que compartamos nuestros sueños, por mas locos y abstractos que sean, quiero que mi inconsciente choque de frente con la realidad, y hasta las comedias romanticas se sorprendan de lo bien que nos llevamos.</p>
+<p>Quiero ser paz, tranquilidad y una suave sonrisa para ti, hoy.... y espero para siempre.</p>
+<p>Como dijo un gran amigo:<br>“Para siempre no es cuestion de tiempo, sino de intensidad.”</p>
+</div>
+<div class="hero-ctas">
+<a href="#ziploc" class="btn primary">Abrir el Ziploc 😼</a>
+<a href="#songs" class="btn secondary">Dame una canción 🎧</a>
+</div>
+<p class="microtext">Si necesitas una sonrisita express, aquí vive.</p>
+</div>
+</section>
+<section id="ziploc" class="section" aria-labelledby="ziploc-title">
+<div class="container">
+<h2 id="ziploc-title">Ziploc de Sonrisas</h2>
+<div class="card highlight" id="ziploc-highlight">
+<div class="phrase" id="z-phrase"></div>
+<div class="meta">
+<span class="tag" id="z-tag"></span>
+</div>
+<div class="actions">
+<button id="z-next" class="btn">Otra 😼</button>
+<button id="z-save" class="btn star" aria-pressed="false">Guardar ⭐</button>
+<button id="z-copy" class="btn">Copiar</button>
+</div>
+<div class="feedback" id="z-feedback" role="status" aria-live="polite"></div>
+</div>
+<div class="explore">
+<div class="filters">
+<input id="z-search" type="search" placeholder="Buscar frase" aria-label="Buscar frase">
+<div id="z-tags" class="chips" role="listbox" aria-label="Filtrar por etiqueta"></div>
+<label class="fav-toggle">
+<input id="z-show-fav" type="checkbox">
+<span>Ver solo ⭐ favoritos</span>
+</label>
+</div>
+<div id="z-list" class="grid"></div>
+</div>
+</div>
+</section>
+<section id="songs" class="section" aria-labelledby="songs-title">
+<div class="container">
+<h2 id="songs-title">Canciones</h2>
+<div id="mood-selector" class="chips" aria-label="Seleccionar mood"></div>
+<div class="card highlight" id="song-highlight">
+<div class="song-title" id="s-title"></div>
+<div class="song-artist" id="s-artist"></div>
+<div class="song-note" id="s-note"></div>
+<div class="actions">
+<a id="s-open" class="btn primary" href="#" target="_blank" rel="noopener">Abrir 🎶</a>
+<button id="s-next" class="btn">Otra 🎧</button>
+<button id="s-save" class="btn star" aria-pressed="false">Guardar ⭐</button>
+</div>
+<div class="feedback" id="s-feedback" role="status" aria-live="polite"></div>
+</div>
+<div id="s-list" class="grid"></div>
+</div>
+</section>
+</main>
+<div id="heart-layer" aria-hidden="true"></div>
+<script src="./app.js" type="module"></script>
+</body>
+</html>

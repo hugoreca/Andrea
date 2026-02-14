@@ -1,0 +1,28 @@
+{
+  "ziploc": [
+    { "id": "z1", "text": "Esto es un abrazo digital, relax.", "tag": "cursi" },
+    { "id": "z2", "text": "Te debo un café, un sticker y dos risas.", "tag": "meme" },
+    { "id": "z3", "text": "Tu risa: mi playlist favorita.", "tag": "cursi" },
+    { "id": "z4", "text": "Modo avión: solo tú y yo.", "tag": "deep" },
+    { "id": "z5", "text": "Benita aprueba este mensaje de ternura.", "tag": "benita" },
+    { "id": "z6", "text": "Plan: mimir contigo en llamada, sin prisa.", "tag": "mimir" },
+    { "id": "z7", "text": "Sonrisita express entregada con garantía.", "tag": "meme" },
+    { "id": "z8", "text": "Eres mi coincidencia favorita.", "tag": "deep" },
+    { "id": "z9", "text": "Sticker de gatito: enviado con cariño.", "tag": "benita" },
+    { "id": "z10", "text": "Te guardé en mi bolsillo de cosas bonitas.", "tag": "cursi" }
+  ],
+  "songs": [
+    { "id": "s1", "title": "Fade Into You", "artist": "Mazzy Star", "url": "http://youtube.com/watch?v=ImKY6TZEyrI", "mood": "calmadas", "note": "I want to hold the hand inside of you" },
+    { "id": "s2", "title": "Junk Of The Heart (Happy)", "artist": "The Kooks", "url": "https://www.youtube.com/watch?v=8pvHZ4ddR-4", "mood": "euforia", "note": "I want to make you HAPPY" },
+    { "id": "s3", "title": "Las Batallas", "artist": "Cafe Tacvba", "url": "https://www.youtube.com/watch?v=o4BiODeM_h0", "mood": "cursis", "note": "Ojala nunca perdamos la ingenuidad al querer" },
+    { "id": "s4", "title": "Zoom", "artist": "Soda Stereo", "url": "https://www.youtube.com/watch?v=HBO2nDIYi0E", "mood": "cursis", "note": "Hagamos que las fotos gachas, sean recuerdos chidos." },
+    { "id": "s5", "title": "Siempre te busque", "artist": "Monocordio", "url": "https://www.youtube.com/watch?v=mtG-tExBQws", "mood": "mágicas", "note": "Somos un gran match." },
+    { "id": "s6", "title": "Entresueno", "artist": "Dirty Karma", "url": "https://www.youtube.com/watch?v=I8Ajb_TTOlM", "mood": "oniricas", "note": "Te quiero sonar" },
+    { "id": "s7", "title": "Sometimes", "artist": "Polock", "url": "https://www.youtube.com/watch?v=3ZLEmr7nIu8", "mood": "cursi/feliz", "note": "Sometimes but everytime" },
+    { "id": "s8", "title": "This Modern Love", "artist": "Bloc Party", "url": "https://www.youtube.com/watch?v=gpyXaICxTuI", "mood": "cursi/onirica", "note": "Te quiero, pero me da miedo ser intenso (?)" },
+    { "id": "s9", "title": "It's Nice to Be Alive", "artist": "Ball Park Music", "url": "https://www.youtube.com/watch?v=LSgz7Ept79o", "mood": "euforia", "note": "La vida se siente ligera." },
+    { "id": "s10", "title": "¿Te das Cuenta?", "artist": "Los Románticos de Zacatecas", "url": "https://www.youtube.com/watch?v=TjEn138XRLE", "mood": "cursis", "note": "Siempre valdra la pena vernos, aunquen no haya una razón especifica." },
+    { "id": "s11", "title": "Downtown", "artist": "Majical Cloudz", "url": "https://www.youtube.com/watch?v=7Rihk7_2BVw", "mood": "cursis", "note": "hdsm no tengo forma de explicar esta cancion con palabras" },
+    { "id": "s12", "title": "My Kind Of Woman", "artist": "Mac Demarco", "url": "https://www.youtube.com/watch?v=wIuBcb2T55Q", "mood": "ochentero_mamador", "note": "Pulso lento y envolvente." }
+  ]
+}
