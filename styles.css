@@ -122,7 +122,7 @@ h2 { font-size: 1.6rem; margin: 0 0 18px 0; letter-spacing: 0.5px; text-transfor
   .grid { grid-template-columns: repeat(3, minmax(0, 1fr)) }
 }
 .is-visible { opacity: 1; transform: none }
-.section { opacity: 0; transform: translateY(8px); transition: opacity 280ms ease, transform 280ms ease }
+.section { opacity: 1; transform: none; transition: opacity 280ms ease, transform 280ms ease }
 .heart-layer { pointer-events: none }
 #heart-layer { position: fixed; inset: 0; z-index: 20 }
 .heart {
