@@ -194,6 +194,7 @@ const zCard = (item) => {
     if (p) state.zFav.delete(item.id); else state.zFav.add(item.id);
     saveFavs();
     setPressed(fav, !p);
+    animateStar(fav);
     const r = e.target.getBoundingClientRect();
     hearts(r.left + r.width / 2, r.top + window.scrollY);
   };
