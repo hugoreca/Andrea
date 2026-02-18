@@ -1,5 +1,19 @@
 const qs = (s, r = document) => r.querySelector(s);
 const qsa = (s, r = document) => Array.from(r.querySelectorAll(s));
+const DEFAULT_DATA = {
+  ziploc: [
+    { id: "dz1", text: "Esto es un abrazo digital, relax.", tag: "cursi" },
+    { id: "dz2", text: "Te debo un café, un sticker y dos risas.", tag: "meme" },
+    { id: "dz3", text: "Tu risa: mi playlist favorita.", tag: "cursi" },
+    { id: "dz4", text: "Modo avión: solo tú y yo.", tag: "deep" }
+  ],
+  songs: [
+    { id: "ds1", title: "Fade Into You", artist: "Mazzy Star", url: "https://www.youtube.com/watch?v=ImKY6TZEyrI", mood: "calmadas", note: "Suspiras sin darte cuenta." },
+    { id: "ds2", title: "This Modern Love", artist: "Bloc Party", url: "https://www.youtube.com/watch?v=gpyXaICxTuI", mood: "cursis", note: "Te pienso con ritmo." },
+    { id: "ds3", title: "Kiss Me", artist: "Sixpence None The Richer", url: "https://www.youtube.com/watch?v=8N-qo2KcKfQ", mood: "cursis", note: "Inocente y perfecto." },
+    { id: "ds4", title: "Put Your Records On", artist: "Corinne Bailey Rae", url: "https://www.youtube.com/watch?v=0c1pQcBvF-A", mood: "para_sonreir", note: "La vida se siente ligera." }
+  ]
+};
 const state = {
   data: { ziploc: [], songs: [] },
   zFav: new Set(JSON.parse(localStorage.getItem("favorites_ziploc") || "[]")),
@@ -50,6 +64,12 @@ const hearts = (x, y) => {
 const live = (el, msg) => { el.textContent = msg; setTimeout(() => { el.textContent = ""; }, 1200); };
 const copyText = async (text) => {
   try { await navigator.clipboard.writeText(text); return true; } catch { return false; }
+};
+const animateStar = (el) => {
+  el.classList.remove("toggled");
+  void el.offsetWidth;
+  el.classList.add("toggled");
+  setTimeout(() => el.classList.remove("toggled"), 650);
 };
 const observeSections = () => {
   const io = new IntersectionObserver((entries) => {
@@ -138,6 +158,7 @@ const renderZHighlight = () => {
     if (p) state.zFav.delete(pick.id); else state.zFav.add(pick.id);
     saveFavs();
     setPressed(save, !p);
+    animateStar(save);
     const r = e.target.getBoundingClientRect();
     hearts(r.left + r.width / 2, r.top + window.scrollY);
     live(qs("#z-feedback"), p ? "Removido ✨" : "Guardado ✨");
@@ -207,6 +228,7 @@ const renderSongHighlight = () => {
     if (p) state.sFav.delete(pick.id); else state.sFav.add(pick.id);
     saveFavs();
     setPressed(save, !p);
+    animateStar(save);
     const r = e.target.getBoundingClientRect();
     hearts(r.left + r.width / 2, r.top + window.scrollY);
     live(qs("#s-feedback"), p ? "Removido ✨" : "Guardado ✨");
@@ -241,6 +263,7 @@ const sCard = (item) => {
     if (p) state.sFav.delete(item.id); else state.sFav.add(item.id);
     saveFavs();
     setPressed(fav, !p);
+    animateStar(fav);
     const r = e.target.getBoundingClientRect();
     hearts(r.left + r.width / 2, r.top + window.scrollY);
   };
@@ -268,7 +291,12 @@ const init = async () => {
   try {
     const res = await fetch("./data/content.json");
     const json = await res.json();
-    state.data = json;
+    const validZ = Array.isArray(json?.ziploc) ? json.ziploc : [];
+    const validS = Array.isArray(json?.songs) ? json.songs : [];
+    state.data = {
+      ziploc: validZ.length ? validZ : DEFAULT_DATA.ziploc,
+      songs: validS.length ? validS : DEFAULT_DATA.songs
+    };
     buildTagChips();
     buildMoodChips();
     renderZHighlight();
@@ -276,8 +304,13 @@ const init = async () => {
     renderSongHighlight();
     renderSongList();
   } catch {
-    qs("#z-phrase").textContent = "No se pudo cargar el contenido.";
-    qs("#s-title").textContent = "No se pudo cargar el contenido.";
+    state.data = DEFAULT_DATA;
+    buildTagChips();
+    buildMoodChips();
+    renderZHighlight();
+    renderZList();
+    renderSongHighlight();
+    renderSongList();
   }
 };
 document.addEventListener("DOMContentLoaded", init);
