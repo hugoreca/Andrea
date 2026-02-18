@@ -30,6 +30,7 @@ const saveFavs = () => {
 };
 const randItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 const unique = (arr) => [...new Set(arr)];
+const getTags = (item) => Array.isArray(item?.tags) ? item.tags : (item?.tag ? [item.tag] : []);
 const setPressed = (el, pressed) => el.setAttribute("aria-pressed", pressed ? "true" : "false");
 const setSelectedChip = (wrap, value) => qsa(".chip", wrap).forEach(c => c.classList.toggle("selected", c.dataset.value === value));
 const hearts = (x, y) => {
@@ -79,7 +80,7 @@ const observeSections = () => {
 };
 const buildTagChips = () => {
   const wrap = qs("#z-tags");
-  const tags = unique(state.data.ziploc.map(z => z.tag)).sort();
+  const tags = unique(state.data.ziploc.flatMap(z => getTags(z))).sort();
   const all = document.createElement("button");
   all.className = "chip";
   all.dataset.value = "all";
@@ -132,7 +133,7 @@ const buildMoodChips = () => {
 };
 const zFiltered = () => {
   let items = state.data.ziploc;
-  if (state.zTag !== "all") items = items.filter(i => i.tag === state.zTag);
+  if (state.zTag !== "all") items = items.filter(i => getTags(i).includes(state.zTag));
   if (state.zSearch) {
     const q = state.zSearch.toLowerCase();
     items = items.filter(i => i.text.toLowerCase().includes(q));
@@ -149,7 +150,7 @@ const renderZHighlight = () => {
   const items = zFiltered();
   const pick = items.length ? randItem(items) : null;
   qs("#z-phrase").textContent = pick ? pick.text : "Sin elementos";
-  qs("#z-tag").textContent = pick ? `#${pick.tag}` : "";
+  qs("#z-tag").textContent = pick ? `#${getTags(pick).join(" #")}` : "";
   const save = qs("#z-save");
   if (pick) setPressed(save, state.zFav.has(pick.id));
   save.onclick = (e) => {
@@ -179,7 +180,8 @@ const zCard = (item) => {
   t.textContent = item.text;
   const m = document.createElement("div");
   m.className = "list-card-meta";
-  m.textContent = `#${item.tag}`;
+  const tg = getTags(item);
+  m.textContent = tg.length ? `#${tg.join(" #")}` : "";
   const a = document.createElement("div");
   a.className = "list-card-actions";
   const fav = document.createElement("button");

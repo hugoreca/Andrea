@@ -1,18 +1,12 @@
 {
   "ziploc": [
-    { "id": "z1", "text": "Esto es un abrazo digital, relax.", "tag": "cursi" },
-    { "id": "z2", "text": "Te debo un café, un sticker y dos risas.", "tag": "meme" },
-    { "id": "z3", "text": "Tu risa: mi playlist favorita.", "tag": "cursi" },
-    { "id": "z4", "text": "Modo avión: solo tú y yo.", "tag": "deep" },
-    { "id": "z5", "text": "Benita aprueba este mensaje de ternura.", "tag": "benita" },
-    { "id": "z6", "text": "Plan: mimir contigo en llamada, sin prisa.", "tag": "mimir" },
-    { "id": "z7", "text": "Sonrisita express entregada con garantía.", "tag": "meme" },
-    { "id": "z8", "text": "Eres mi coincidencia favorita.", "tag": "deep" },
-    { "id": "z9", "text": "Sticker de gatito: enviado con cariño.", "tag": "benita" },
-    { "id": "z10", "text": "Te guardé en mi bolsillo de cosas bonitas.", "tag": "cursi" }
+    { "id": "z1", "text": "🫠🫠🫠🫠 que ganas de hacerse nahual en el cerro y puro existir y espantar gente aveda", "tags": ["random", "Andrea"] },
+    { "id": "z2", "text": "Quiero tener una biblioteca de memes espirituales contigo :)", "tags": ["memes", "Hugo"] },
+    { "id": "z3", "text": "Tu risa: mi cancion favorita.", "tags": ["cursi", "Hugo"] },
+    { "id": "z4", "text": "Ya Yepetaste?", "tags": ["random", "Hugo"] }
   ],
   "songs": [
-    { "id": "s1", "title": "Fade Into You", "artist": "Mazzy Star", "url": "http://youtube.com/watch?v=ImKY6TZEyrI", "mood": "calmadas", "note": "I want to hold the hand inside of you" },
+    { "id": "s1", "title": "Fade Into You", "artist": "Mazzy Star", "url": "https://youtube.com/watch?v=ImKY6TZEyrI", "mood": "calmadas", "note": "I want to hold the hand inside of you" },
     { "id": "s2", "title": "Junk Of The Heart (Happy)", "artist": "The Kooks", "url": "https://www.youtube.com/watch?v=8pvHZ4ddR-4", "mood": "euforia", "note": "I want to make you HAPPY" },
     { "id": "s3", "title": "Las Batallas", "artist": "Cafe Tacvba", "url": "https://www.youtube.com/watch?v=o4BiODeM_h0", "mood": "cursis", "note": "Ojala nunca perdamos la ingenuidad al querer" },
     { "id": "s4", "title": "Zoom", "artist": "Soda Stereo", "url": "https://www.youtube.com/watch?v=HBO2nDIYi0E", "mood": "cursis", "note": "Hagamos que las fotos gachas, sean recuerdos chidos." },
@@ -24,6 +18,6 @@
     { "id": "s10", "title": "¿Te das Cuenta?", "artist": "Los Románticos de Zacatecas", "url": "https://www.youtube.com/watch?v=TjEn138XRLE", "mood": "cursis", "note": "Siempre valdra la pena vernos, aunquen no haya una razón especifica." },
     { "id": "s11", "title": "Downtown", "artist": "Majical Cloudz", "url": "https://www.youtube.com/watch?v=7Rihk7_2BVw", "mood": "cursis", "note": "hdsm no tengo forma de explicar esta cancion con palabras" },
     { "id": "s12", "title": "My Kind Of Woman", "artist": "Mac Demarco", "url": "https://www.youtube.com/watch?v=wIuBcb2T55Q", "mood": "ochentero_mamador", "note": "Pulso lento y envolvente." },
-    { "id": "s12", "title": "Lucky", "artist": "Fiji Blue", "url": "https://www.youtube.com/watch?v=GKMnVJoWjnc", "mood": "cursi", "note": "❤️‍🔥❤️‍🔥❤️‍🔥" }
+    { "id": "s13", "title": "Lucky", "artist": "Fiji Blue", "url": "https://www.youtube.com/watch?v=GKMnVJoWjnc", "mood": "cursis", "note": "❤️‍🔥❤️‍🔥❤️‍🔥" }
   ]
 }
