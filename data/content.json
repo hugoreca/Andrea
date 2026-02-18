@@ -3,7 +3,8 @@
     { "id": "z1", "text": "🫠🫠🫠🫠 que ganas de hacerse nahual en el cerro y puro existir y espantar gente aveda", "tags": ["random", "Andrea"] },
     { "id": "z2", "text": "Quiero tener una biblioteca de memes espirituales contigo :)", "tags": ["memes", "Hugo"] },
     { "id": "z3", "text": "Tu risa: mi cancion favorita.", "tags": ["cursi", "Hugo"] },
-    { "id": "z4", "text": "Ya Yepetaste?", "tags": ["random", "Hugo"] }
+    { "id": "z4", "text": "Ya Yepetaste?", "tags": ["random", "Hugo"] },
+    { "id": "z5", "text": "Pero si Batman es un cientifico... y pura tragedia y ser darks", "tags": ["random", "Andrea"] }
   ],
   "songs": [
     { "id": "s1", "title": "Fade Into You", "artist": "Mazzy Star", "url": "https://youtube.com/watch?v=ImKY6TZEyrI", "mood": "calmadas", "note": "I want to hold the hand inside of you" },
