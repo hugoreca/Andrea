@@ -8,8 +8,7 @@ const state = {
   zTag: "all",
   zOnlyFav: false,
   mood: "all",
-  reduce: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-  motionOverride: localStorage.getItem("motion_override") === "on"
+  reduce: window.matchMedia("(prefers-reduced-motion: reduce)").matches
 };
 const saveFavs = () => {
   localStorage.setItem("favorites_ziploc", JSON.stringify([...state.zFav]));
@@ -20,7 +19,7 @@ const unique = (arr) => [...new Set(arr)];
 const setPressed = (el, pressed) => el.setAttribute("aria-pressed", pressed ? "true" : "false");
 const setSelectedChip = (wrap, value) => qsa(".chip", wrap).forEach(c => c.classList.toggle("selected", c.dataset.value === value));
 const hearts = (x, y) => {
-  if (state.reduce && !state.motionOverride) return;
+  if (state.reduce) return;
   const layer = qs("#heart-layer");
   for (let i = 0; i < 10; i++) {
     const h = document.createElement("span");
@@ -257,36 +256,11 @@ const renderSongList = () => {
 const wireInputs = () => {
   qs("#z-search").addEventListener("input", (e) => { state.zSearch = e.target.value; renderZList(); renderZHighlight(); });
   qs("#z-show-fav").addEventListener("change", (e) => { state.zOnlyFav = e.target.checked; renderZList(); renderZHighlight(); });
-  qs("#modeToggle").addEventListener("click", (e) => {
-    const pressed = e.currentTarget.getAttribute("aria-pressed") === "true";
-    const next = !pressed;
-    e.currentTarget.setAttribute("aria-pressed", next ? "true" : "false");
-    document.body.classList.toggle("more-night", next);
-  });
-  const mBtn = qs("#motionToggle");
-  if (mBtn) {
-    mBtn.addEventListener("click", (e) => {
-      const pressed = e.currentTarget.getAttribute("aria-pressed") === "true";
-      const next = !pressed;
-      e.currentTarget.setAttribute("aria-pressed", next ? "true" : "false");
-      state.motionOverride = next;
-      localStorage.setItem("motion_override", next ? "on" : "off");
-      document.documentElement.classList.toggle("force-motion", next);
-      document.body.classList.toggle("animate", next || !state.reduce);
-      qs("#hero").classList.add("is-visible");
-    });
-  }
+  // No toggles: modo noche y animaciones fueron retirados
 };
 const init = async () => {
-  if (state.motionOverride || !state.reduce) {
+  if (!state.reduce) {
     document.body.classList.add("animate");
-  }
-  if (state.motionOverride) {
-    document.documentElement.classList.add("force-motion");
-  }
-  const mBtn = qs("#motionToggle");
-  if (mBtn) {
-    mBtn.setAttribute("aria-pressed", state.motionOverride ? "true" : "false");
   }
   qs("#hero").classList.add("is-visible");
   observeSections();
